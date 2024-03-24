@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double nota;
+
+        // Pedir uma nota até que um valor válido seja inserido
+        do {
+            System.out.print("Digite uma nota entre zero e dez: ");
+            nota = scanner.nextDouble();
+
+            // Verificar se a nota está no intervalo válido
+            if (nota < 0 || nota > 10) {
+                System.out.println("Nota inválida. A nota deve estar entre zero e dez.");
+            }
+        } while (nota < 0 || nota > 10);
+
+        // Exibir a nota válida fornecida pelo usuário
+        System.out.println("A nota inserida é: " + nota);
+    }
+}
