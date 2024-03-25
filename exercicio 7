@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Inicializa a variável para armazenar o maior número
+        int maiorNumero = Integer.MIN_VALUE;
+
+        // Loop para ler os números e encontrar o maior
+        for (int i = 1; i <= 5; i++) {
+            System.out.print("Digite o número " + i + ": ");
+            int numero = scanner.nextInt();
+
+            // Atualiza o maior número se o número digitado for maior
+            if (numero > maiorNumero) {
+                maiorNumero = numero;
+            }
+        }
+
+        // Exibe o maior número
+        System.out.println("O maior número digitado é: " + maiorNumero);
+    }
+}
