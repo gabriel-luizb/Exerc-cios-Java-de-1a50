@@ -1,0 +1,21 @@
+public class Main {
+    public static void main(String[] args) {
+        int populacaoA = 80000;
+        double taxaCrescimentoA = 0.03;
+        
+        int populacaoB = 200000;
+        double taxaCrescimentoB = 0.015;
+        
+        int anos = 0;
+        
+        // Calcula o número de anos necessários para que A ultrapasse B
+        while (populacaoA <= populacaoB) {
+            populacaoA += (int) (populacaoA * taxaCrescimentoA);
+            populacaoB += (int) (populacaoB * taxaCrescimentoB);
+            anos++;
+        }
+        
+        // Exibe o resultado
+        System.out.println("Número de anos necessários para que a população de A ultrapasse ou iguale a população de B: " + anos);
+    }
+}
